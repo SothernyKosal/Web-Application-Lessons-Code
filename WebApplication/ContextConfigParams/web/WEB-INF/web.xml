@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <param-name>free access</param-name>
+        <param-value>context param is accessible to all servlets</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>contextParam</param-name>
+        <param-value>allows multiple access</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>NewServlet</servlet-class>
+        <init-param>
+            <param-name>color</param-name>
+            <param-value>red</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>SecondServlet</servlet-class>
+        <init-param>
+            <param-name>driverName</param-name>
+            <param-value>com.mysql.jdbc.Driver</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>thirdServletContextParam</servlet-name>
+        <servlet-class>thirdServletContextParam</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ForthServletContextParam</servlet-name>
+        <servlet-class>ForthServletContextParam</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/SecondServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>thirdServletContextParam</servlet-name>
+        <url-pattern>/thirdServletContextParam</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ForthServletContextParam</servlet-name>
+        <url-pattern>/ForthServletContextParam</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <!--create new servlet-->
+        <servlet-name>Batch6Servlet</servlet-name>
+        <servlet-class>Batch6Servlet</servlet-class>
+        <!--<servlet-class> will create the obj-->
+    </servlet>
+    <servlet>
+        <servlet-name>responseHeader</servlet-name>
+        <servlet-class>responseHeader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Batch6Servlet</servlet-name>
+        <url-pattern>/Batch6Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>responseHeader</servlet-name>
+        <url-pattern>/responseHeader</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
