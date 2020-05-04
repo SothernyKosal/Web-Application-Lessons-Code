@@ -1,0 +1,6 @@
+strategydp.doOperationAdd
+strategydp.StrategyDP
+strategydp.context
+strategydp.doOperationSubstract
+strategydp.doOperationMultiply
+strategydp.strategy
